@@ -1,0 +1,27 @@
+{
+  "name": "team-generator",
+  "version": "1.0.0",
+  "description": "This is a Node CLI application for team profile summary generation.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinmuk/team-generator.git"
+  },
+  "author": "Nitin Mukesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitinmuk/team-generator/issues"
+  },
+  "homepage": "https://github.com/nitinmuk/team-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.1",
+    "jest": "^26.1.0"
+  }
+}
