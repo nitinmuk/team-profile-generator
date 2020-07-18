@@ -13,19 +13,31 @@ const render = require("./lib/htmlRenderer");
 
 const employees = [];
 
+const managerQuestions = questions.filter(question => (question.name =='name' || question.name=='id'
+                          || question.name=='email' || question.name=='officeNumber'));
 console.log("Welcome to Team Profile Generator. Let us build an engineering team");
-acceptEmployees();
+console.log("First of all, enter manager's details as requested below.");
+acceptManagerEmployee();
 
 /**
- * accepts employees details recursively
+ * accepts manager's details and then invoke function to accept other employees details.
+ */
+function acceptManagerEmployee() {
+    inquirer.prompt(managerQuestions).then(answers => {
+        const emp = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+        employees.push(emp);
+        console.log("Thanks for sharing manager's details, please enter other team members details as requested below");
+        acceptEmployees();
+    })
+}
+
+/**
+ * accepts non manager employees details recursively
  */
 function acceptEmployees() {
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(questions).then(answers => {
         let emp;
         switch (answers.role) {
-            case 'Manager':
-                emp = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
-                break;
             case 'Engineer':
                 emp = new Engineer(answers.name, answers.id, answers.email, answers.githubUser);
                 break;
