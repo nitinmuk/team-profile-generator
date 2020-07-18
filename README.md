@@ -24,6 +24,8 @@ You are most welcome to contribute. There are various ways to do same:
 3. Raise a defect request.
 ## Tests
 Please run node app.js command from terminal and then check output folder for team.html file. you may check this [video](https://drive.google.com/file/d/1foqJXOMC6dGj2zjwA4WdYYOl6Mm8JzlW/view) as well to see a sample application execution.
+## Screenshot
+![sample_team_html](./assets/images/readme/sample_team_html.JPG)
 ## License
 This application is not covered under any license currently
 ## Questions
