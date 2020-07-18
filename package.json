@@ -8,20 +8,30 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nitinmuk/team-generator.git"
   },
   "author": "Nitin Mukesh",
-  "license": "ISC",
+  "license": "None",
   "bugs": {
     "url": "https://github.com/nitinmuk/team-generator/issues"
   },
   "homepage": "https://github.com/nitinmuk/team-generator#readme",
   "dependencies": {
     "inquirer": "^7.3.1",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "jest-coverage-badges": "^1.1.2"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary", 
+      "text",
+      "lcov"
+    ]
   }
 }
