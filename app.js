@@ -62,7 +62,7 @@ const writeToFile = (html) => {
         fs.mkdir(OUTPUT_DIR, error => error ? console.log(error) : console.log("Output folder created..."));      
     }
     fs.writeFile(outputPath, html, error =>
-        error ? console.log(error) : console.log("Team profile generated successfully in output folder.")
+        error ? console.log(error) : console.log("team.html generated successfully in output folder.")
     );
 
 }
