@@ -1,7 +1,11 @@
 # Team Profile Generator
 [![](https://img.shields.io/badge/License-None-green)](#license)
+![badge-branches](./coverage/badge-branches.svg)
+![badge-functions](./coverage/badge-functions.svg)
+![badge-lines](./coverage/badge-lines.svg)
+![badge-statements](./coverage/badge-statements.svg)
 ## Description
-It is a command line application to generate software engineering team profile. The application will prompt the user for information about the team manager and then information about the other team members. The user can enter any number of team members. When the user has completed building the team, the application will create a team.html file in output folder in current directory.
+It is a command line application to generate software engineering team profile. The application will prompt the user for information about the team manager and then information about the other team members. The user can enter any number of team members. When the user has completed building the team, the application will create a team.html file in output folder in current directory. if output folder is not present, then it will be created.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
